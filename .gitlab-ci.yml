@@ -1,0 +1,21 @@
+stages:
+  - test
+  - build
+
+test:
+  image: ruby:2.4.1
+  script:
+    - rake test
+
+build_tags:
+  stage: build
+  only:
+    - tags
+  tags:
+    - builder
+  variables:
+    BUILD_NAME: 'cic:$CI_COMMIT_TAG'
+  script:
+    - docker build -t $BUILD_NAME ./
+    - docker tag $BUILD_NAME registry-internal.cn-shenzhen.aliyuncs.com/iqing/$BUILD_NAME
+    - docker push registry-internal.cn-shenzhen.aliyuncs.com/iqing/$BUILD_NAME
