@@ -1,11 +1,5 @@
 stages:
-  - test
   - build
-
-test:
-  image: ruby:2.4.1
-  script:
-    - rake test
 
 build_tags:
   stage: build
