@@ -1,0 +1,16 @@
+<div class="container">
+  <table class="table table-striped">
+    <tr>
+      <th>名称</th>
+      <th>版本号</th>
+      <th>时间</th>
+    </tr>
+    <% @services.each do |service| %>
+    <tr>
+      <td><%= service.name %></td>
+      <td><%= service.tag %></td>
+      <td><%= service.created_at.strftime("%Y-%m-%d %H:%M") %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>
