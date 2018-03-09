@@ -16,9 +16,10 @@ RUN apt-get install -y --force-yes -V \
 
 RUN mkdir $APP_HOME
 
-ADD ./Gemfile* $APP_HOME/
+ADD ./Gemfile* $APP_HOME
 
 RUN cd $APP_HOME/ \
+    && ls
     && bundle install
 
 ADD . $APP_HOME
