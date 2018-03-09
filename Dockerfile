@@ -13,6 +13,7 @@ RUN apt-get install -y --force-yes -V \
     libssl-dev libcurl4-openssl-dev \
     libyaml-dev libmysqlclient-dev \
     nodejs \
+    && npm install -g yarn \
     && apt-get clean
 
 # ADD ./Gemfile* $APP_HOME/
