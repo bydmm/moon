@@ -19,6 +19,9 @@ RUN mkdir $APP_HOME
 ADD ./Gemfile* $APP_HOME/
 
 RUN cd $APP_HOME/ \
+    && ls
+
+RUN cd $APP_HOME/ \
     && ls \
     && bundle install
 
