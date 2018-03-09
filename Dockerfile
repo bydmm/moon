@@ -19,7 +19,7 @@ RUN mkdir $APP_HOME
 ADD ./Gemfile* $APP_HOME
 
 RUN cd $APP_HOME/ \
-    && ls
+    && ls \
     && bundle install
 
 ADD . $APP_HOME
