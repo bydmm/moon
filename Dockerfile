@@ -1,7 +1,7 @@
 FROM ruby:2.4.1
 
-ENV APP_HOME = "/app"
-ENV RAILS_ENV = "production"
+ENV APP_HOME "/app"
+ENV RAILS_ENV "production"
 
 COPY ./sources.list /etc/apt/sources.list
 
