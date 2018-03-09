@@ -14,20 +14,14 @@ RUN apt-get install -y --force-yes -V \
     libyaml-dev libmysqlclient-dev \
     && apt-get clean
 
-RUN mkdir $APP_HOME
-
-ADD ./Gemfile* $APP_HOME/
-
-RUN cd $APP_HOME/ \
-    && ls
-
-RUN cd $APP_HOME/ \
-    && ls \
-    && bundle install
+# ADD ./Gemfile* $APP_HOME/
+#
+# RUN cd $APP_HOME/ \
 
 ADD . $APP_HOME
 
 RUN cd $APP_HOME/ \
+    && bundle install \
     && bundle exec rake assets:precompile
 
 COPY docker-entrypoint.sh /usr/local/bin/
