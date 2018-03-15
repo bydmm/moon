@@ -1,1 +1,1 @@
-# CIC (战斗信息服务中心)
+# We choose to go to the moon
