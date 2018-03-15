@@ -8,7 +8,7 @@ build_tags:
   tags:
     - builder
   variables:
-    BUILD_NAME: 'moom:$CI_COMMIT_TAG'
+    BUILD_NAME: 'moon:$CI_COMMIT_TAG'
   script:
     - docker build -t $BUILD_NAME ./
     - docker tag $BUILD_NAME registry-internal.cn-shenzhen.aliyuncs.com/iqing/$BUILD_NAME
