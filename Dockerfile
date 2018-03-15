@@ -12,15 +12,13 @@ RUN apt-get install -y --force-yes -V \
     zlib1g-dev build-essential \
     libssl-dev libcurl4-openssl-dev \
     libyaml-dev libmysqlclient-dev \
-    nodejs nodejs-legacy npm \
+    nodejs nodejs-legacy npm nginx\
     && npm install -g yarn \
     && npm install n -g \
     && n stable \
     && apt-get clean
 
-# ADD ./Gemfile* $APP_HOME/
-#
-# RUN cd $APP_HOME/ \
+COPY ./nginx.conf /etc/nginx/sites-enabled/nginx.conf
 
 ADD . $APP_HOME
 
