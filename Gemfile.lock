@@ -100,8 +100,11 @@ GEM
     nio4r (2.2.0)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
+    oj (3.5.0)
     public_suffix (3.0.2)
     puma (3.11.2)
+    rabl (0.13.1)
+      activesupport (>= 2.3.14)
     rack (2.0.4)
     rack-test (0.8.3)
       rack (>= 1.0, < 3)
@@ -193,7 +196,9 @@ DEPENDENCIES
   jquery-rails
   listen (>= 3.0.5, < 3.2)
   mysql2 (~> 0.4.10)
+  oj
   puma (~> 3.7)
+  rabl
   rails (~> 5.1.4)
   redis (~> 3.0)
   sass-rails (~> 5.0)

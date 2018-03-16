@@ -19,6 +19,10 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'jbuilder', '~> 2.5'
 # Mysql
 gem "mysql2", '~> 0.4.10'
+# JSON Render
+gem 'rabl'
+# Also add either `oj` or `yajl-ruby` as the JSON parser
+gem 'oj'
 
 # Frontend gems
 # Use SCSS for stylesheets

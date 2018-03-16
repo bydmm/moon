@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="panel panel-info">
+    <div class="panel-heading"><%= @service.name %></div>
+    <div class="panel-body">
+      <div>Version: <%= @service.tag %></div>
+      <div>部署于：<%= @service.created_at.strftime("%Y-%m-%d %H:%M") %></div>
+    </div>
+  </div>
+</div>
