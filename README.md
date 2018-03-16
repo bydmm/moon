@@ -19,3 +19,9 @@ moon:
     aliyun.routing.port_8888: moon.iqing.com
     aliyun.log_store_dbstdout: stdout
 ```
+
+想改网页代码: http://v3.bootcss.com/
+
+想学怎么写后端代码: https://ruby-china.github.io/rails-guides/
+
+API - rabl的文档: https://github.com/nesquena/rabl
