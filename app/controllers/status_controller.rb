@@ -3,7 +3,7 @@ class StatusController < ApplicationController
   before_action :authed!, only: [:create]
 
   def index
-    @services = Service.order(created_at: :desc).limit(100)
+    @services = Service.order(id: :desc).limit(100)
   end
 
   def create
